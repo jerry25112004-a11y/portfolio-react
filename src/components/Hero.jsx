@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
-
+import img1 from '../../public/profile.png'
+const cv = "/M_Aitzaz_CV.pdf";
 const words = ['ASP.NET Core Developer', 'C# Developer', 'SQL Server Developer', 'Frontend Developer']
 
 export default function Hero({ onDownloadCV }) {
@@ -78,12 +79,13 @@ export default function Hero({ onDownloadCV }) {
                 Hire Me
               </a>
 
-              <button
-                onClick={onDownloadCV}
+              <a
+                href={cv}
+                download="Muhammad_Aitzaz_CV.pdf"
                 className="inline-block py-[14px] px-[34px] rounded-full font-semibold border-2 border-primary text-white transition-all duration-400 hover:-translate-y-1.5 hover:shadow-[0_10px_30px_rgba(255,0,0,.5)] hover:bg-primary"
               >
                 Download CV
-              </button>
+              </a>
             </div>
 
             {/* Social Icons */}
@@ -118,7 +120,7 @@ export default function Hero({ onDownloadCV }) {
           {/* Right */}
           <div className="flex-1 flex justify-center">
             <img
-              src="/images/profile.png"
+              src={img1}
               alt="Profile"
               className="profile-image w-[220px] sm:w-[260px] lg:w-[380px] rounded-full border-[6px] border-primary shadow-[0_0_30px_rgba(255,0,0,.4),0_0_70px_rgba(255,0,0,.2)] hover:scale-105 transition-transform duration-500"
             />

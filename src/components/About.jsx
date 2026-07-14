@@ -1,3 +1,4 @@
+import img1 from '../../public/profile.png'
 const details = [
   { label: 'Name', value: 'Muhammad Aitzaz' },
   { label: 'Email', value: 'm.aitzazqamar510@gmail.com' },
@@ -13,7 +14,7 @@ export default function About() {
           {/* Left */}
           <div className="flex-1 flex justify-center order-1 lg:order-none">
             <img
-              src="/images/profile.png"
+              src={img1}
               alt="Muhammad Aitzaz"
               className="w-[280px] sm:w-[340px] lg:w-[380px] rounded-[20px] border-[5px] border-primary shadow-[0_0_35px_rgba(255,0,0,.25)] transition-transform duration-400 hover:scale-[1.03]"
             />

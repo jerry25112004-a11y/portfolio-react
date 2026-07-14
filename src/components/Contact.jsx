@@ -62,7 +62,7 @@ export default function Contact({ onResult }) {
     <section id="contact" className="py-[80px] lg:py-[110px]">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-14">
-          <span className="text-primary font-bold">GET IN TOUCH</span>
+          {/* <span className="text-primary font-bold">GET IN TOUCH</span> */}
           <h2 className="text-[28px] sm:text-[34px] lg:text-[42px] font-bold uppercase mt-2 mb-6 section-title inline-block">
             Contact Me
           </h2>

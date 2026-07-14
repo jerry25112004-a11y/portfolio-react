@@ -1,5 +1,38 @@
-import projects from '../data/projects'
 import useScrollReveal from '../hooks/useScrollReveal'
+
+// Images live in src/assets/images so Vite can bundle them via import.
+// (Files in /public are served as raw static paths instead — that's why
+// importing from '../../public/...' didn't work.)
+import ecommerceImg from '../../public/ecommerce.jpg'
+import studentManagementImg from '../../public/student-management.jpg'
+import inventorySystemImg from '../../public/inventorysystem.jpg'
+
+const projects = [
+  {
+    image: ecommerceImg,
+    alt: 'E-Commerce Website',
+    badge: 'Completed Project',
+    title: 'E-Commerce Website',
+    text: 'A modern and fully responsive E-Commerce website developed using ASP.NET Core MVC, C#, SQL Server, HTML, CSS, Bootstrap and JavaScript. It features product browsing, category management, shopping cart, secure checkout, and an intuitive user interface.',
+    tech: ['ASP.NET Core MVC', 'C#', 'SQL Server', 'Bootstrap', 'JavaScript'],
+  },
+  {
+    image: studentManagementImg,
+    alt: 'Student Management System',
+    badge: 'Completed Project',
+    title: 'Student Management System',
+    text: 'A Windows Forms application built using C# and SQL Server featuring student registration, search, update, delete and complete CRUD operations.',
+    tech: ['C#', 'SQL Server', 'Windows Forms'],
+  },
+  {
+    image: inventorySystemImg,
+    alt: 'Inventory Management System',
+    badge: 'Completed Project',
+    title: 'Inventory Management System',
+    text: 'Inventory management software created using C#, SQL Server and Windows Forms for managing products, stock and reports.',
+    tech: ['C#', 'SQL Server', 'Desktop App'],
+  },
+]
 
 function ProjectCard({ project }) {
   const [ref, visible] = useScrollReveal()
@@ -48,7 +81,7 @@ export default function Projects() {
     <section id="projects" className="py-[80px] lg:py-[110px]">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-14">
-          <span className="text-primary font-bold">MY WORK</span>
+          {/* <span className="text-primary font-bold">MY WORK</span> */}
           <h2 className="text-[28px] sm:text-[34px] lg:text-[42px] font-bold uppercase mt-2 mb-6 section-title inline-block">
             Featured Projects
           </h2>
